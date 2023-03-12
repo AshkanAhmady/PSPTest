@@ -1,14 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
   return (
     <>
-      <div>hello world</div>
+      <h1 className="text-xl font-medium mb-2">Dashboard...</h1>
+      <p className="text-sm">Welcome To PSP-Express</p>
     </>
-  )
+  );
 }
