@@ -1,3 +1,4 @@
+import { hasPermissions } from "@/utils/hasPermissions";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -10,8 +11,6 @@ const SideBar = () => {
       <ul className="flex flex-col gap-3 font-medium">
         <li>
           <Link
-            className=""
-            // activeClassName="active"
             href="/"
           >
             <div className="flex items-center gap-2 ">
@@ -31,10 +30,9 @@ const SideBar = () => {
               </svg>
               <span className={`border-b border-slate-900 ${router.pathname == "/todos" && "border-violet-500"}`}>Todo List</span>
             </div>
-
           </Link>
         </li>
-        <li>
+        {hasPermissions(["accessSettingPermission"]) && <li>
           <Link
             href="/setting"
           >
@@ -44,9 +42,8 @@ const SideBar = () => {
               </svg>
               <span className={`border-b border-slate-900 ${router.pathname == "/setting" && "border-violet-500"}`}>Setting</span>
             </div>
-
           </Link>
-        </li>
+        </li>}
       </ul>
     </div>
   );

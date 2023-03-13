@@ -1,0 +1,8 @@
+{
+  "name": "ashkan",
+  "email": "ashkan16ma96@gmail.com",
+  "permissions": [
+    "accessTodosPermission",
+    "accessDashboadrPermmission"
+  ]
+}

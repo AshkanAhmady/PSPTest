@@ -2,10 +2,6 @@ export interface LayoutPropsType {
   children: React.ReactNode;
 }
 
-// ################################################
-// ################################################
-// ################################################
-
 export interface SingleTodoType {
   completed: boolean;
   id: number;
@@ -13,18 +9,13 @@ export interface SingleTodoType {
   userId: number;
 }
 
-// ################################################
-// ################################################
-// ################################################
-
-export interface ReactQueryType {
-  data: any;
-  error: any;
+export interface fetchTodosRequestType {
+  data: Array<SingleTodoType> | undefined;
+  error: null | Error;
   isError: boolean;
   isLoading: boolean;
 }
 
-
 export interface TodoComponentPropsType {
-  todo: SingleTodoType
+  todo: SingleTodoType;
 }
