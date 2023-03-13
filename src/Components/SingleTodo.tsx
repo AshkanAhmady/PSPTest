@@ -1,9 +1,6 @@
 import { TodoComponentPropsType } from "@/types";
 
 const SingleTodo: React.FC<TodoComponentPropsType> = ({ todo }) => {
-
-    console.log(todo)
-
     return (
         <div className="bg-stone-100 rounded-md shadow-md p-2 text-black inline-block">
             <h1 className="text-xl font-medium text-stone-700">{todo.title}</h1>
